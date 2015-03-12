@@ -33,6 +33,27 @@
         <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
         <script type="text/javascript">
             $(function() {
+                
+                var youtubeId = selectVideo();
+                
+                function selectVideo() {
+                    var video_list = ['hyjqDdUeK70', // Benny Benassi
+                                      'WdvJakBzK3E', // Carnage
+                                      'eBZjZ6eAzMw', // Hardwell
+                                      'xg7sptEx0Ms', // Dimitri Vegas & Like Mike
+                                      'H2fkge3qrmY', // Armin van Buuren
+                                      '05DSMz1Tyrk', // NERVO
+                                      'Pz0lZWLFoZM', // Nicky Romero
+                                      'Pz5b_qoQ51g', // Tiesto
+                                      'BJOiK7FOtLM', // Dyro
+                                      '7KygxwFJYZo'];// Steve Aoki
+                    
+                    var i = Math.floor(Math.random()*video_list.length);
+                    
+                    return video_list[i];         
+                    
+                }
+                
                 $("#TLcountdown").TimeCircles({
                     count_past_zero: false,
                     total_duration: "Months",
@@ -49,7 +70,7 @@
                     }});
                 
                 $('#wrapper').tubular({
-                    videoId: '05DSMz1Tyrk',
+                    videoId: youtubeId,
                     mute: false,
                     playButtonClass: 'tubular-play',
                     pauseButtonClass: 'tubular-pause',

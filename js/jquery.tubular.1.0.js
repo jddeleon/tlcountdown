@@ -57,7 +57,8 @@
                     controls: 0,
                     showinfo: 0,
                     modestbranding: 1,
-                    wmode: 'transparent'
+                    wmode: 'transparent',
+                    iv_load_policy: 3
                 },
                 events: {
                     'onReady': onPlayerReady,
