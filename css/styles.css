@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    background-color: black;
+    position: fixed
+
+}
+
+#TLcountdown {
+    color: white;
+}
+
+
+.video-controls a {
+    background-color: #BB4478;
+    border-color: black;
+}
+
+.video-controls span {
+    color: white;
+}
+
+.video-controls a:hover {
+    background-color: #831042;
+}
