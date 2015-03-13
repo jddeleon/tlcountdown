@@ -12,8 +12,11 @@
         <div id="wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div><img src="img/logo.png"></div>
+                    <a id="toggle" href="" class="toggle btn btn-default pull-right">Hide &times;</a>
+                    <div id="main" class="col-lg-12">      
+                        <div>
+                            <img src="img/logo.png">  
+                        </div>
                         <div id="TLcountdown" data-date="2015-07-24 12:00:00"></div>
                         <div id="video-controls" class="video-controls">
                             <a href="" class="tubular-play btn btn-default"><span class="glyphicon glyphicon-play"></span></a>
@@ -31,56 +34,6 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/TimeCircles.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
-        <script type="text/javascript">
-            $(function() {
-                
-                var youtubeId = selectVideo();
-                
-                function selectVideo() {
-                    var video_list = ['hyjqDdUeK70', // Benny Benassi
-                                      'WdvJakBzK3E', // Carnage
-                                      'eBZjZ6eAzMw', // Hardwell
-                                      'xg7sptEx0Ms', // Dimitri Vegas & Like Mike
-                                      'H2fkge3qrmY', // Armin van Buuren
-                                      '05DSMz1Tyrk', // NERVO
-                                      'Pz0lZWLFoZM', // Nicky Romero
-                                      'Pz5b_qoQ51g', // Tiesto
-                                      'BJOiK7FOtLM', // Dyro
-                                      '7KygxwFJYZo'];// Steve Aoki
-                    
-                    var i = Math.floor(Math.random()*video_list.length);
-                    
-                    return video_list[i];         
-                    
-                }
-                
-                $("#TLcountdown").TimeCircles({
-                    count_past_zero: false,
-                    total_duration: "Months",
-                    animation: "Ticks",
-                    bg_width: .5,
-                    fg_width: 0.04,
-    
-                    time: {
-                        Days: { color: "#BB4478" },
-                        Hours: { color: "#BB4478" },
-                        Minutes: { color: "#BB4478" },
-                        Seconds: { color: "#BB4478" }
-                           
-                    }});
-                
-                $('#wrapper').tubular({
-                    videoId: youtubeId,
-                    mute: false,
-                    playButtonClass: 'tubular-play',
-                    pauseButtonClass: 'tubular-pause',
-                    muteButtonClass: 'tubular-mute',
-                    volumeUpClass: 'tubular-vol-up',
-                    volumeDownClass: 'tubular-vol-down'
-                    
-                });
-            });
-            
-        </script>
+        <script type="text/javascript" src="js/countdown.js"></script>
     </body>
 </html>
